@@ -41,7 +41,9 @@ class Car {
   }
 
   drive(hours) {
-    this.distance += hours * this.speed;
+    if (this.isOn) {
+      this.distance += hours * this.speed;
+    }
   }
 
   turnOff() {
